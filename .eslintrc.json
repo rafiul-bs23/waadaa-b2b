@@ -1,3 +1,111 @@
 {
-  "extends": ["next/core-web-vitals", "next/typescript"]
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "plugin:react/recommended",
+    "plugin:jsx-a11y/recommended",
+    "plugin:prettier/recommended",
+    "next/core-web-vitals",
+    "next/typescript"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint", "react", "jsx-a11y", "prettier", "import"],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "rules": {
+    "prettier/prettier": "off",
+    "react/react-in-jsx-scope": "off",
+    "jsx-a11y/alt-text": "warn",
+    "jsx-a11y/anchor-is-valid": [
+      "warn",
+      {
+        "aspects": ["invalidHref"]
+      }
+    ],
+    "no-console": [
+      "warn",
+      {
+        "allow": ["warn", "error"]
+      }
+    ],
+    "no-debugger": "warn",
+    "react/prop-types": "off",
+    "sort-imports": [
+      "error",
+      {
+        "ignoreDeclarationSort": true,
+        "ignoreCase": true
+      }
+    ],
+    "import/order": [
+      "error",
+      {
+        "groups": ["builtin", "external", "internal", ["sibling", "parent"], "index"],
+        "pathGroups": [
+          {
+            "pattern": "@/components/**",
+            "group": "internal",
+            "position": "after"
+          },
+          {
+            "pattern": "@/services/**",
+            "group": "internal",
+            "position": "after"
+          },
+          {
+            "pattern": "@/hooks/**",
+            "group": "internal",
+            "position": "after"
+          },
+          {
+            "pattern": "@/stores{,/**}",
+            "group": "internal",
+            "position": "after"
+          },
+          {
+            "pattern": "@/i18n/**",
+            "group": "internal",
+            "position": "after"
+          },
+          {
+            "pattern": "@/utils/**",
+            "group": "internal",
+            "position": "after"
+          },
+          {
+            "pattern": "@/assets/**",
+            "group": "internal",
+            "position": "after"
+          },
+          {
+            "pattern": "@/types/**",
+            "group": "internal",
+            "position": "after"
+          }
+        ],
+        "pathGroupsExcludedImportTypes": ["builtin"],
+        "newlines-between": "always",
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        }
+      }
+    ]
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {}
+    }
+  }
 }
