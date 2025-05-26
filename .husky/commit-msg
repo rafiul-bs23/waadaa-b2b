@@ -1,0 +1,5 @@
+# First, run commitlint to check conventional commit rules
+npx commitlint --edit "$1"
+
+# Then, run your custom validation script to enforce the custom commit message pattern
+node scripts/validate-commit.js "$1"

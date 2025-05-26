@@ -51,7 +51,13 @@
     "import/order": [
       "error",
       {
-        "groups": ["builtin", "external", "internal", ["sibling", "parent"], "index"],
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          ["sibling", "parent"],
+          "index"
+        ],
         "pathGroups": [
           {
             "pattern": "@/components/**",

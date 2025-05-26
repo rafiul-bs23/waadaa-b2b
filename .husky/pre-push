@@ -1,0 +1,4 @@
+node scripts/check-branch-name.js
+
+# Build the project
+npm run build

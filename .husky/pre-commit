@@ -1,0 +1,11 @@
+# Format code
+npm run format
+
+# Lint and fix issues
+npm run lint:fix
+
+# Add changes with normalization
+git add --renormalize .
+
+# Run branch name check
+node scripts/check-branch-name.js
