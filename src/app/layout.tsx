@@ -14,10 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
-        <h1>Root</h1>
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
