@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Authentication",
+  title: "BRAND",
   description: "Sign in or sign up to access your business dashboard.",
 };
 
-export default function AuthLayout({
+export default function BrandLayout({
   children,
 }: {
   children: React.ReactNode;
@@ -13,7 +13,7 @@ export default function AuthLayout({
   return (
     <>
       {children}
-      <h1>Auth</h1>
+      <h1>H&M</h1>
     </>
   );
 }
