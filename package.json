@@ -17,6 +17,7 @@
     "@fontsource/montserrat": "^5.2.5",
     "autoprefixer": "^10.4.21",
     "axios": "^1.9.0",
+    "cookie": "^1.0.2",
     "feather-icons": "^4.29.2",
     "next": "14.2.29",
     "primereact": "^10.9.5",
