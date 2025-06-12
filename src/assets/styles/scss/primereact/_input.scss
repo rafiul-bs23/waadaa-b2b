@@ -1,0 +1,92 @@
+.custom-input,
+.custom-otp {
+  &.button,
+  &.input,
+  &.optgroup,
+  &.select,
+  .p-inputtext {
+    border: 1px solid var(--wd-grey-nicke) !important;
+    color: var(--wd-naro);
+    height: 2.75rem;
+    font-weight: 600;
+    font-size: 1rem;
+    font-style: normal;
+    line-height: 1.5rem;
+    &::placeholder {
+      @apply text-sm font-normal leading-6 text-left;
+    }
+
+    &:enabled:focus {
+      outline: none !important;
+      box-shadow: none !important;
+      border-color: initial !important;
+    }
+    &.p-invalid {
+      border-color: var(--wd-error) !important;
+    }
+  }
+
+  textarea {
+    @apply text-2xl-rem font-bold text-black;
+    border: 1px solid var(--wd-grey-nicke) !important;
+    color: var(--wd-naro);
+    height: 7.5rem;
+
+    &::placeholder {
+      @apply text-sm font-normal leading-6 text-left;
+    }
+
+    &:enabled:focus {
+      outline: none !important;
+      box-shadow: none !important;
+      border-color: initial !important;
+    }
+  }
+}
+
+.custom-otp {
+  label {
+    @apply flex justify-between items-center;
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    color: var(--wid-outer-space);
+  }
+
+  .p-inputotp.p-component {
+    @apply flex justify-between;
+    .p-inputtext {
+      @apply w-full;
+    }
+  }
+  &-resend-in {
+    @apply font-medium;
+    color: var(--wd-buttons-primary-active-background);
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-style: normal;
+  }
+  &-counter {
+    @apply flex gap-2;
+    &-count {
+      @apply w-[2.3rem] text-right flex;
+      color: var(--wd-sonic-silver);
+      font-family: var(--wd-font-montserrat), sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 0.875rem;
+      line-height: 1.375rem;
+    }
+  }
+  &-resend {
+    @apply flex items-center justify-between;
+    button {
+      @apply font-medium;
+      font-style: normal;
+      font-size: 0.875rem;
+      line-height: 1.375rem;
+      margin-bottom: 0.125rem;
+      color: var(--wd-buttons-primary-active-background);
+    }
+  }
+}

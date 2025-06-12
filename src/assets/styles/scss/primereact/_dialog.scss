@@ -1,0 +1,12 @@
+.p-dialog {
+  border-radius: 0;
+  overflow: hidden;
+
+  &-mask.p-component-overlay {
+    @apply bg-[var(--wd-black-45)];
+  }
+
+  &-content {
+    border-radius: 0;
+  }
+}

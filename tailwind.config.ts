@@ -2,29 +2,16 @@
 
 import type { Config } from "tailwindcss";
 
-const containerScreens = {
+import { containerPlugin } from "./src/utils/tailwind-plugins";
+
+const screens = {
+  xs: "375px",
   sm: "540px",
   md: "720px",
   lg: "960px",
   xl: "1140px",
   "2xl": "1320px",
   "3xl": "1440px",
-};
-
-const screens = {
-  xs: "375px",
-  ...containerScreens,
-};
-
-const padding = {
-  DEFAULT: "1rem", // Default padding for screens smaller than `sm`
-  xs: "1rem",
-  sm: "1rem",
-  md: "2rem",
-  lg: "3rem",
-  xl: "4rem",
-  "2xl": "4.5rem",
-  "3xl": "5rem",
 };
 
 const fontSize = {
@@ -68,16 +55,11 @@ const config: Config = {
       screens,
       fontFamily,
     },
-
-    container: {
-      center: true,
-      padding,
-      screens: containerScreens,
-    },
   },
-  plugins: [
-    /*containerPlugin*/
-  ],
+  corePlugins: {
+    container: false,
+  },
+  plugins: [containerPlugin],
 };
 
 export default config;

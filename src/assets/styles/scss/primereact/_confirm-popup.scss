@@ -1,0 +1,15 @@
+.p-confirm-popup {
+  &-footer {
+    @apply flex justify-end;
+
+    .p-button {
+      padding: 0.45rem 1.25rem !important;
+      height: auto;
+    }
+  }
+
+  &-reject {
+    background: var(--wd-white);
+    color: var(--wd-red);
+  }
+}

@@ -1,5 +1,3 @@
-// src/stores/index.tsx
-
-import useSiteSettingsStore from "@/stores/SiteSettingsStore";
+import useSiteSettingsStore from "@/stores/site-settings/SiteSettingsStore";
 
 export { useSiteSettingsStore };
