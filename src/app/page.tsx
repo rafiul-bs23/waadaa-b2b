@@ -7,7 +7,7 @@ export default function Home() {
         background: "var(--wd-charcoal)",
       }}
     >
-      hello
+      Home Page
     </div>
   );
 }
